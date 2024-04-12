@@ -21,7 +21,7 @@ public class Tableconcept {
 			String countryname = driver.findElement(By.xpath("//*[@class='ui-datatable-scrollable-body']//table/tbody//tr[\"+i+\"]//td[2]//span[contains(@style,'vertical-align')]")).getText(); 
 			if (Expectedcountryname.equalsIgnoreCase(countryname))
 			{
-				String Representative = driver.findElement(By.xpath("//*[@class='ui-datatable-scrollable-body']//table/tbody//tr[\"+i+\"]//td[3]//span[contains(@style,'vertical-align')]")).getText();
+				String Representative = driver.findElement(By.xpath("//*[@class='ui-datatable-scrollable-body']//table/tbody//tr[\"+i+\"]//td[2]//span[contains(@style,'vertical-align')]")).getText();
 				System.out.println(Representative);
 				//String Status = driver.findElement(By.xpath("//*[@class='ui-datatable-scrollable-body']//table/tbody//tr[\"+i+\"]td[5]//span[contains(@class,'customer-badge')]")).getText();
 				//System.out.println(Status);
@@ -29,11 +29,14 @@ public class Tableconcept {
 			}
 					
 	}
+	
+	
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		Tableconcept s = new Tableconcept();
 		s.table("india");
+		
 
 	}
 

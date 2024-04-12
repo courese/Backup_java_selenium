@@ -32,7 +32,7 @@ public class Listconcept {
 		driver.findElement(By.xpath("//*[contains(@class,'ui-selectcheckboxmenu-trigger')]")).click();
 		List<WebElement> AllValues = driver.findElements(By.xpath("//*[contains(@class,'ui-selectcheckboxmenu-items-wrapper')]//ul//li")); // it is to get all the list values so that webelements is used here
  		int size = AllValues.size(); // it will give the total count of allvalues object
- 		for(int i=1;i<+size;i++) // for condition here used is to iterating all values
+ 		for(int i=1;i<=size;i++) // for condition here used is to iterating all values
  		{
  			String values = driver.findElement(By.xpath("//*[contains(@class,'ui-selectcheckboxmenu-items-wrapper')]//ul//li["+i+"]")).getAttribute("data-item-value"); //+i+ is used to reach the respective rows in the list 
 			//get attribute is used to get the runtime values and stored in the string named as values
